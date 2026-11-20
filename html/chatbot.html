@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        NeuroCare AI Chatbot
+    </title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="dashboard-navbar">
+
+        <div class="logo">
+            NeuroCare AI
+        </div>
+
+        <ul class="dashboard-links">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="patient.html">
+                    Patient
+                </a>
+            </li>
+
+            <li>
+                <a href="emergency.html">
+                    Emergency
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <!-- Chatbot Section -->
+
+    <section class="chatbot-section">
+
+        <div class="chatbot-container">
+
+            <!-- Header -->
+
+            <div class="chatbot-header">
+
+                <div>
+
+                    <h1>
+                        AI Healthcare Assistant
+                    </h1>
+
+                    <p>
+                        Smart support for Alzheimer’s & Dementia care
+                    </p>
+
+                </div>
+
+                <div class="ai-status">
+
+                    <span class="status-dot"></span>
+
+                    AI Online
+
+                </div>
+
+            </div>
+
+            <!-- Quick Actions -->
+
+            <div class="quick-actions">
+
+                <button onclick="quickMessage('Medicine Reminder')">
+                    Medicine Reminder
+                </button>
+
+                <button onclick="quickMessage('Memory Exercise')">
+                    Memory Exercise
+                </button>
+
+                <button onclick="quickMessage('Emergency Help')">
+                    Emergency Help
+                </button>
+
+                <button onclick="quickMessage('Talk to Caregiver')">
+                    Talk to Caregiver
+                </button>
+
+            </div>
+
+            <!-- Chat Box -->
+
+            <div class="chat-box"
+                 id="chatBox">
+
+                <div class="bot-message">
+
+                    Hello 👋<br><br>
+
+                    I am your NeuroCare AI assistant.
+                    How can I help you today?
+
+                </div>
+
+            </div>
+
+            <!-- Input -->
+
+            <div class="chat-input-area">
+
+                <input type="text"
+                       id="userInput"
+                       placeholder="Type your message...">
+
+                <button class="voice-btn"
+                        onclick="startVoiceRecognition()">
+
+                    🎤
+
+                </button>
+
+                <button class="send-btn"
+                        onclick="sendMessage()">
+
+                    Send
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 NeuroCare AI | AI Healthcare Chatbot
+        </p>
+
+    </footer>
+
+    <!-- JavaScript -->
+
+    <script src="../js/chatbot.js"></script>
+
+</body>
+
+</html>

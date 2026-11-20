@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Cognitive Memory Test - NeuroCare AI</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="memory-test-page">
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">NeuroCare AI</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="patient.html">Dashboard</a></li>
+      <li><a href="medicine.html">Medicine</a></li>
+      <li><a href="emergency.html">Emergency</a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN CONTAINER -->
+  <div class="memory-test-container">
+    
+    <!-- HEADER -->
+    <header class="memory-header">
+      <div class="header-content">
+        <div class="header-icon">🧠</div>
+        <h1>AI Cognitive Memory Assessment</h1>
+        <p>Professional brain health evaluation powered by AI</p>
+      </div>
+      <div class="header-timer">
+        <span class="timer-label">Time Remaining</span>
+        <div class="timer-display" id="timerDisplay">10:00</div>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT GRID -->
+    <div class="memory-content-grid">
+      <form id="memoryForm">
+          <!-- Question 1 -->
+          <div class="question-group">
+            <div class="question-number">1</div>
+            <div class="question-content">
+              <label for="q1" class="question-label">What is today's date?</label>
+              <input type="text" id="q1" class="question-input" placeholder="e.g., May 22, 2026" required>
+              <span class="input-hint">Provide the full date</span>
+            </div>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="question-group memory-highlight">
+            <div class="question-number">2</div>
+            <div class="question-content">
+              <label class="question-label">📌 Remember This Word</label>
+              <div class="memory-word-box">HOSPITAL</div>
+              <p class="memory-instruction">You will be asked to recall this word later.</p>
+            </div>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="question-group">
+            <div class="question-number">3</div>
+            <div class="question-content">
+              <label for="q3" class="question-label">What is 17 minus 5?</label>
+              <input type="number" id="q3" class="question-input" placeholder="Enter your answer" required>
+              <span class="input-hint">Basic arithmetic</span>
+            </div>
+          </div>
+
+          <!-- Question 4 -->
+          <div class="question-group">
+            <div class="question-number">4</div>
+            <div class="question-content">
+              <label for="q4" class="question-label">If it's Tuesday, what day comes next?</label>
+              <input type="text" id="q4" class="question-input" placeholder="Enter the day name" required>
+              <span class="input-hint">Day of the week</span>
+            </div>
+          </div>
+
+          <!-- Question 5 -->
+          <div class="question-group">
+            <div class="question-number">5</div>
+            <div class="question-content">
+              <label for="q5" class="question-label">Count backward from 10 to 1 (no spaces)</label>
+              <input type="text" id="q5" class="question-input" placeholder="e.g., 10987654321" required>
+              <span class="input-hint">Type the sequence</span>
+            </div>
+          </div>
+
+          <!-- Question 6 -->
+          <div class="question-group">
+            <div class="question-number">6</div>
+            <div class="question-content">
+              <label for="q6" class="question-label">Which animal is known for barking?</label>
+              <input type="text" id="q6" class="question-input" placeholder="Enter the animal" required>
+              <span class="input-hint">Common pet</span>
+            </div>
+          </div>
+
+          <!-- Question 7 -->
+          <div class="question-group memory-recall">
+            <div class="question-number">7</div>
+            <div class="question-content">
+              <label for="q7" class="question-label">🧠 Recall: What word was shown in Question 2?</label>
+              <input type="text" id="q7" class="question-input" placeholder="What was the memory word?" required>
+              <span class="input-hint">Test your memory</span>
+            </div>
+          </div>
+
+          <!-- Question 8 -->
+          <div class="question-group">
+            <div class="question-number">8</div>
+            <div class="question-content">
+              <label for="q8" class="question-label">What do you use to see your reflection?</label>
+              <input type="text" id="q8" class="question-input" placeholder="Enter the object" required>
+              <span class="input-hint">Household item</span>
+            </div>
+          </div>
+
+          <div class="memory-actions">
+            <button type="submit" class="primary-btn">Submit Memory Test</button>
+          </div>
+        </form>
+
+        <!-- Previous score + Live score -->
+        <div class="previous-score" id="previousScore"></div>
+
+        <!-- Progress Card -->
+        <div class="progress-card" aria-live="polite">
+          <h2>Progress</h2>
+          <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="7">
+            <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+          </div>
+          <div id="progressText">0/7 Correct</div>
+        </div>
+
+        <!-- Result Card -->
+        <div id="resultBox" class="result-box" aria-live="polite"></div>
+
+        <!-- AI Analysis Card -->
+        <div class="ai-box" style="margin-top: 18px; background: transparent; padding: 0; border-radius: 16px;">
+          <div class="analysis-card" id="analysisCard">
+            <h3>AI Cognitive Analysis</h3>
+            <div id="analysisText" class="analysis-text">Complete the test to see your result.</div>
+            <div id="analysisBadge" class="analysis-badge" aria-hidden="true"></div>
+          </div>
+        </div>
+
+        <!-- Brain tip -->
+        <div class="brain-tip-box" aria-live="polite">
+          <div class="brain-tip-title">Today’s Brain Exercise Tip</div>
+          <div id="brainTip" class="brain-tip-content">Loading tip...</div>
+        </div>
+
+        <!-- Motivation (text + optional voice) -->
+        <div class="motivation-box">
+          <div class="motivation-title">Motivation</div>
+          <div id="motivationText">Stay consistent—small daily practice helps cognition.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 NeuroCare AI | AI Cognitive Analysis System</p>
+  </footer>
+
+  <script src="../js/memory-test.js"></script>
+</body>
+</html>
+

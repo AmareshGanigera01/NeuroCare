@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        NeuroCare AI Appointments
+    </title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="dashboard-navbar">
+
+        <div class="logo">
+            NeuroCare AI
+        </div>
+
+        <ul class="dashboard-links">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="patient.html">
+                    Patient
+                </a>
+            </li>
+
+            <li>
+                <a href="doctor.html">
+                    Doctor
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <!-- Appointment Section -->
+
+    <section class="appointment-section">
+
+        <div class="appointment-container">
+
+            <div class="appointment-header">
+
+                <h1>
+                    AI Appointment Booking
+                </h1>
+
+                <p>
+                    Schedule healthcare consultations easily
+                </p>
+
+            </div>
+
+            <!-- Booking Form -->
+
+            <div class="appointment-form-card">
+
+                <h2>
+                    Book Appointment
+                </h2>
+
+                <form id="appointmentForm">
+
+                    <div class="input-grid">
+
+                        <div class="input-group">
+
+                            <label>
+                                Patient Name
+                            </label>
+
+                            <input type="text"
+                                   id="patientName"
+                                   required>
+
+                        </div>
+
+                        <div class="input-group">
+
+                            <label>
+                                Doctor
+                            </label>
+
+                            <select id="doctorName"
+                                    required>
+
+                                <option value="">
+                                    Select Doctor
+                                </option>
+
+                                <option>
+                                    Dr. Sharma
+                                </option>
+
+                                <option>
+                                    Dr. Priya
+                                </option>
+
+                                <option>
+                                    Dr. Kumar
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="input-group">
+
+                            <label>
+                                Appointment Date
+                            </label>
+
+                            <input type="date"
+                                   id="appointmentDate"
+                                   required>
+
+                        </div>
+
+                        <div class="input-group">
+
+                            <label>
+                                Appointment Time
+                            </label>
+
+                            <input type="time"
+                                   id="appointmentTime"
+                                   required>
+
+                        </div>
+
+                    </div>
+
+                    <button type="submit"
+                            class="primary-btn">
+
+                        Book Appointment
+
+                    </button>
+
+                </form>
+
+            </div>
+
+            <!-- Upcoming Appointments -->
+
+            <div class="appointment-list-card">
+
+                <h2>
+                    Upcoming Appointments
+                </h2>
+
+                <div id="appointmentList">
+
+                </div>
+
+            </div>
+
+            <!-- Emergency Booking -->
+
+            <div class="emergency-booking">
+
+                <h2>
+                    Emergency Consultation
+                </h2>
+
+                <p>
+                    Priority appointment during emergencies
+                </p>
+
+                <button class="sos-btn"
+                        onclick="bookEmergencyAppointment()">
+
+                    Emergency Booking
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 NeuroCare AI | Appointment System
+        </p>
+
+    </footer>
+
+    <!-- JS -->
+
+    <script src="../js/appointments.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Emergency SOS | NeuroCare AI
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- Navbar -->
+    <!-- ========================= -->
+
+    <nav class="dashboard-navbar">
+
+        <div class="logo">
+            NeuroCare AI
+        </div>
+
+        <ul class="dashboard-links">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="patient.html">
+                    Patient
+                </a>
+            </li>
+
+            <li>
+                <a href="medicine.html">
+                    Medicine
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <!-- ========================= -->
+    <!-- Emergency Section -->
+    <!-- ========================= -->
+
+    <section class="emergency-section">
+
+        <div class="emergency-container glass-card">
+
+            <h1>
+                Emergency SOS Support
+            </h1>
+
+            <p>
+                AI-powered emergency healthcare assistance.
+            </p>
+
+            <!-- ================= -->
+            <!-- SOS Button -->
+            <!-- ================= -->
+
+            <button
+                class="big-sos-btn"
+                onclick="activateSOS()"
+            >
+                ACTIVATE SOS
+            </button>
+
+            <!-- ================= -->
+            <!-- Status -->
+            <!-- ================= -->
+
+            <div
+                id="sosStatus"
+                class="sos-status"
+            >
+
+                System Ready
+
+            </div>
+
+            <!-- ================= -->
+            <!-- Live Location -->
+            <!-- ================= -->
+
+            <div class="location-box">
+
+                <h2>
+                    Live GPS Location
+                </h2>
+
+                <p id="locationText">
+                    Detecting location...
+                </p>
+
+            </div>
+
+            <!-- ================= -->
+            <!-- Emergency Contacts -->
+            <!-- ================= -->
+
+            <div class="contact-box">
+
+                <h2>
+                    Emergency Contacts
+                </h2>
+
+                <!-- Call -->
+
+                <a
+                    href="tel:108"
+                    class="emergency-action-btn"
+                >
+                    Call Ambulance
+                </a>
+
+                <!-- SMS -->
+
+                <a
+                    href="sms:+919876543210?body=Emergency%20Help%20Needed%20Immediately"
+                    class="emergency-action-btn"
+                >
+                    Send Emergency SMS
+                </a>
+
+                <!-- Email -->
+
+                <a
+                    href="mailto:caregiver@gmail.com?subject=Emergency SOS Alert&body=Patient needs emergency help immediately."
+                    class="emergency-action-btn"
+                >
+                    Send Emergency Email
+                </a>
+
+            </div>
+
+            <!-- ================= -->
+            <!-- Emergency Logs -->
+            <!-- ================= -->
+
+            <div class="log-box">
+
+                <h2>
+                    Emergency Logs
+                </h2>
+
+                <ul id="logList">
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- Footer -->
+    <!-- ========================= -->
+
+    <footer>
+
+        <p>
+            © 2026 NeuroCare AI | Emergency Healthcare System
+        </p>
+
+    </footer>
+
+    <!-- ========================= -->
+    <!-- JavaScript -->
+    <!-- ========================= -->
+
+    <script
+        src="../js/emergency.js"
+    ></script>
+
+</body>
+
+</html>

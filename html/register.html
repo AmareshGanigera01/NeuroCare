@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - NeuroCare AI</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="hero">
+    <div class="glass-card login-card">
+        <h1>Register for NeuroCare AI</h1>
+        <p>Create a secure account for Alzheimer’s care support</p>
+
+        <form id="registerForm">
+            <div class="input-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter a password" required>
+            </div>
+
+            <div class="input-group">
+                <label for="role">Select Role</label>
+                <select id="role" required>
+                    <option value="">Choose Role</option>
+                    <option value="patient">Patient</option>
+                    <option value="caregiver">Caregiver</option>
+                    <option value="doctor">Doctor</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-primary full-btn">Register Account</button>
+        </form>
+
+        <p class="small-text">Already registered? <a href="login.html">Login here</a></p>
+        <p id="registerStatus" class="small-text"></p>
+    </div>
+</div>
+
+<script src="../js/register.js"></script>
+</body>
+</html>

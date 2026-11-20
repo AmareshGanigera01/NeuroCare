@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Medicine Reminder - NeuroCare AI
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+<body>
+
+    <!-- =========================
+         Navbar
+    ========================== -->
+
+    <nav class="dashboard-navbar">
+
+        <div class="logo">
+            NeuroCare AI
+        </div>
+
+        <ul class="dashboard-links">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="patient.html">
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="emergency.html">
+                    Emergency
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <!-- =========================
+         Header
+    ========================== -->
+
+    <section class="dashboard-header">
+
+        <h1>
+            AI Medicine Reminder System
+        </h1>
+
+        <p>
+            Smart medicine tracking with AI voice reminders,
+            caregiver monitoring and daily health support.
+        </p>
+
+    </section>
+
+    <!-- =========================
+         Medicine Section
+    ========================== -->
+
+    <section class="medicine-section">
+
+        <div class="medicine-container">
+
+            <div class="medicine-grid">
+
+                <!-- Medicine Card -->
+
+                <div class="medicine-card">
+
+                    <div class="live-badge">
+                        Morning Dose
+                    </div>
+
+                    <h2>
+                        Donepezil
+                    </h2>
+
+                    <p>
+                        <strong>Time:</strong>
+                        8:00 AM
+                    </p>
+
+                    <p>
+                        <strong>Purpose:</strong>
+                        Memory and cognitive support
+                    </p>
+
+                    <p class="status pending">
+                        Status: Pending
+                    </p>
+
+                    <button
+                        class="primary-btn"
+                        onclick="markTaken(this)"
+                    >
+                        Mark as Taken
+                    </button>
+
+                </div>
+
+                <!-- Medicine Card -->
+
+                <div class="medicine-card">
+
+                    <div class="live-badge">
+                        Afternoon Dose
+                    </div>
+
+                    <h2>
+                        Vitamin Supplement
+                    </h2>
+
+                    <p>
+                        <strong>Time:</strong>
+                        2:00 PM
+                    </p>
+
+                    <p>
+                        <strong>Purpose:</strong>
+                        Brain health support
+                    </p>
+
+                    <p class="status pending">
+                        Status: Pending
+                    </p>
+
+                    <button
+                        class="primary-btn"
+                        onclick="markTaken(this)"
+                    >
+                        Mark as Taken
+                    </button>
+
+                </div>
+
+                <!-- Medicine Card -->
+
+                <div class="medicine-card">
+
+                    <div class="live-badge">
+                        Night Dose
+                    </div>
+
+                    <h2>
+                        Memantine
+                    </h2>
+
+                    <p>
+                        <strong>Time:</strong>
+                        8:00 PM
+                    </p>
+
+                    <p>
+                        <strong>Purpose:</strong>
+                        Dementia symptom management
+                    </p>
+
+                    <p class="status pending">
+                        Status: Pending
+                    </p>
+
+                    <button
+                        class="primary-btn"
+                        onclick="markTaken(this)"
+                    >
+                        Mark as Taken
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- =========================
+                 Reminder Section
+            ========================== -->
+
+            <div class="reminder-box">
+
+                <button
+                    class="reminder-btn"
+                    onclick="startReminder()"
+                >
+                    Start AI Voice Reminder
+                </button>
+
+            </div>
+
+            <!-- =========================
+                 Daily Summary
+            ========================== -->
+
+            <div class="ai-box">
+
+                <h3>
+                    AI Health Summary
+                </h3>
+
+                <p>
+                    Medicine adherence improves cognitive
+                    stability and reduces dementia progression risks.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         Footer
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026 NeuroCare AI |
+            AI Medicine Reminder System
+        </p>
+
+    </footer>
+
+    <!-- =========================
+         JavaScript
+    ========================== -->
+
+    <script src="../js/reminder.js"></script>
+
+</body>
+
+</html>

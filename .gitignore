@@ -1,0 +1,57 @@
+# =============================================================
+# NeuroCare AI — .gitignore
+# Project-specific exclusions for Node.js + Express + MySQL
+# =============================================================
+
+# ----- Dependencies -----
+node_modules/
+
+# ----- Environment & Secrets -----
+.env
+.env.*
+*.env
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+
+# ----- Logs -----
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ----- IDE & Editor Settings -----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ----- Operating System Files -----
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# ----- Build & Output -----
+dist/
+build/
+coverage/
+.cache/
+
+# ----- Temporary Files -----
+*.tmp
+*.bak
+*.orig
+
+# ----- Database Dumps (keep schema.sql) -----
+*.dump
+*.sqlite
+*.db
+
+# ----- Package Manager -----
+# Keep package-lock.json in backend/ for reproducible installs
+# Exclude the nearly-empty root lock file
+/package-lock.json

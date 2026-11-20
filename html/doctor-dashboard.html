@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard - NeuroCare AI</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<nav class="dashboard-navbar">
+    <div class="logo">NeuroCare AI</div>
+    <ul class="dashboard-links">
+        <li><a href="#overview">Dashboard Overview</a></li>
+        <li><a href="#patients">My Patients</a></li>
+        <li><a href="#appointments">Appointments</a></li>
+        <li><a href="#emergencies">Emergency Alerts</a></li>
+        <li><a href="#reports">Reports</a></li>
+        <li><a href="#profile">Profile</a></li>
+    </ul>
+</nav>
+
+<section class="dashboard-hero">
+    <div class="dashboard-hero-content">
+        <div>
+            <h1>Doctor Dashboard</h1>
+            <p>Manage your assigned patients, appointments, emergencies, and reports in one place.</p>
+        </div>
+        <div class="health-score-card">
+            <h2>Ready</h2>
+            <p>Doctor Workspace</p>
+        </div>
+    </div>
+</section>
+
+<main class="dashboard-grid">
+    <section id="overview" class="glass-card dashboard-section">
+        <h2>Dashboard Overview</h2>
+        <div class="summary-grid">
+            <div class="summary-card glass-card">
+                <h3>Assigned Patients</h3>
+                <p id="overviewPatientCount">0</p>
+            </div>
+            <div class="summary-card glass-card">
+                <h3>Upcoming Appointments</h3>
+                <p id="overviewAppointmentCount">0</p>
+            </div>
+            <div class="summary-card glass-card danger-card">
+                <h3>Active Alerts</h3>
+                <p id="overviewAlertCount">0</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="patients" class="glass-card dashboard-section">
+        <h2>My Patients</h2>
+        <div id="doctorPatients" class="doctor-panel-list"></div>
+    </section>
+
+    <section id="appointments" class="glass-card dashboard-section">
+        <h2>Appointments</h2>
+        <div id="doctorAppointments" class="doctor-panel-list"></div>
+    </section>
+
+    <section id="emergencies" class="glass-card dashboard-section">
+        <h2>Emergency Alerts</h2>
+        <div id="doctorEmergencies" class="doctor-panel-list"></div>
+    </section>
+
+    <section id="reports" class="glass-card dashboard-section">
+        <h2>Reports</h2>
+        <div class="report-grid">
+            <div class="report-card glass-card">
+                <h3>Assigned Patients</h3>
+                <p id="reportPatients">0</p>
+            </div>
+            <div class="report-card glass-card">
+                <h3>Memory Tests Logged</h3>
+                <p id="reportMemoryTests">0</p>
+            </div>
+            <div class="report-card glass-card">
+                <h3>Average Score</h3>
+                <p id="reportAvgScore">0</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="profile" class="glass-card dashboard-section">
+        <h2>Profile</h2>
+        <div id="doctorProfile" class="profile-card"></div>
+    </section>
+</main>
+
+<script src="../js/doctor.js"></script>
+
+</body>
+</html>
